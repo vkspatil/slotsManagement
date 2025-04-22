@@ -1,0 +1,47 @@
+# Node.js (Backend) Ignored Files
+
+# Dependencies
+/node/node_modules/
+
+# Environment files
+/node/.env
+/node/.env.local
+/node/.env.production
+/node/.env.development
+/node/.env.test
+
+# Logs
+/node/logs/
+/node/*.log
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Frontend (React) Ignored Files
+
+# Dependencies
+/node_modules/
+
+# Build directories
+/build/
+/dist/
+
+# Environment files
+/.env
+/.env.local
+/.env.production
+/.env.development
+/.env.test
+
+# Logs
+/logs/
+/*.log
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Optional: Ignore lock files (if using yarn or npm)
+/yarn.lock
+/package-lock.json

@@ -1,0 +1,38 @@
+/* For WebKit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 4px;
+  /* Vertical scrollbar width */
+  height: 4px;
+  /* Horizontal scrollbar height */
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(241, 241, 241, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(180, 180, 180, 0.5);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(150, 150, 150, 0.7);
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(180, 180, 180, 0.5) rgba(241, 241, 241, 0.5);
+}
+
+/* Special styling for the dropdown scrollbar */
+.search-dropdown-scrollable::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+.search-dropdown-scrollable::-webkit-scrollbar-thumb {
+  background: rgba(200, 200, 200, 0.7);
+}

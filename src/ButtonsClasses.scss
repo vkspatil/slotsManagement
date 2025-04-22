@@ -1,0 +1,171 @@
+// Mixins for gradients and outlines
+@mixin button-gradient($start, $mid, $end) {
+    background: linear-gradient(to right, $start, $mid, $end);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    transition: background 0.3s ease;
+}
+
+@mixin button-gradient-hover($start, $mid, $end) {
+    background: linear-gradient(to right, darken($start, 10%), darken($mid, 10%), darken($end, 10%));
+}
+
+// Outlined Buttons Mixins
+@mixin button-outlined($color) {
+    border: 2px solid $color;
+    color: $color;
+    background: transparent;
+    padding: 0.5rem 1rem;
+    border-radius:15px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+
+    &:hover {
+        color: darken($color, 10%);
+        border-color: darken($color, 10%);
+    }
+}
+
+@mixin button-outlined-focus($start, $mid, $end) {
+    background: linear-gradient(to right, $start, $mid, $end);
+    color: white;
+    border: none;
+}
+
+// Outlined Buttons
+.custom-blue-outlined {
+    @include button-outlined(#1d4ed8);
+
+    &:focus {
+        @include button-gradient(#1d4ed8, #2563eb, #3b82f6);
+    }
+}
+
+.custom-green-outlined {
+    @include button-outlined(#16a34a);
+
+    &:focus {
+        @include button-gradient(#16a34a, #22c55e, #4ade80);
+    }
+}
+
+.custom-cyan-outlined {
+    @include button-outlined(#0d9cde);
+
+    &:focus {
+        @include button-gradient(#0d9cde, #0ea5e9, #06b6d4);
+    }
+}
+
+.custom-teal-outlined {
+    @include button-outlined(#0f766e);
+
+    &:focus {
+        @include button-gradient(#0f766e, #14b8a6, #2dd4bf);
+    }
+}
+
+.custom-lime-outlined {
+    @include button-outlined(#a1c700);
+
+    &:focus {
+        @include button-gradient(#a1c700, #a3e635, #d9f99d);
+    }
+}
+
+.custom-red-outlined {
+    @include button-outlined(#dc2626);
+
+    &:focus {
+        @include button-gradient(#dc2626, #ef4444, #f87171);
+    }
+}
+
+.custom-pink-outlined {
+    @include button-outlined(#be185d);
+
+    &:focus {
+        @include button-gradient(#be185d, #db2777, #ec4899);
+    }
+}
+
+.custom-purple-outlined {
+    @include button-outlined(#7e22ce);
+
+    &:focus {
+        @include button-gradient(#7e22ce, #9333ea, #a855f7);
+    }
+}
+
+// Filled Buttons
+.custom-blue-filled {
+    @include button-gradient(#1d4ed8, #2563eb, #3b82f6);
+    color: white;
+
+    &:hover {
+        @include button-gradient-hover(#1e40af, #1d4ed8, #1e3a8a);
+    }
+}
+
+.custom-green-filled {
+    @include button-gradient(#16a34a, #22c55e, #4ade80);
+    color: white;
+
+    &:hover {
+        @include button-gradient-hover(#15803d, #16a34a, #14532d);
+    }
+}
+
+.custom-cyan-filled {
+    @include button-gradient(#26c6da, #00acc1, #0ea5e9);
+    color: white;
+
+    &:hover {
+        @include button-gradient-hover(#0b4d8a, #0d9cde, #0284c7);
+    }
+}
+
+.custom-teal-filled {
+    @include button-gradient(#0f766e, #14b8a6, #2dd4bf);
+    color: white;
+
+    &:hover {
+        @include button-gradient-hover(#0d4a40, #0f766e, #14b8a6);
+    }
+}
+
+.custom-lime-filled {
+    @include button-gradient(#a1c700, #a3e635, #d9f99d);
+    color: #4a4a4a;
+
+    &:hover {
+        @include button-gradient-hover(#9aab00, #a1c700, #c0d900);
+    }
+}
+
+.custom-red-filled {
+    @include button-gradient(#dc2626, #ef4444, #f87171);
+    color: white;
+
+    &:hover {
+        @include button-gradient-hover(#b91c1c, #dc2626, #f87171);
+    }
+}
+
+.custom-pink-filled {
+    @include button-gradient(#be185d, #db2777, #ec4899);
+    color: white;
+
+    &:hover {
+        @include button-gradient-hover(#a21b5b, #be185d, #d12a5b);
+    }
+}
+
+.custom-purple-filled {
+    @include button-gradient(#7e22ce, #9333ea, #a855f7);
+    color: white;
+
+    &:hover {
+        @include button-gradient-hover(#6b21a8, #7e22ce, #9333ea);
+    }
+}
